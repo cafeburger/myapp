@@ -23,16 +23,12 @@ export class PartiesForm {
     if (this.partiesForm.valid) {
       Parties.insert({
         name: party.name,
-        descriptyion: party.description,
+        description: party.description,
         location: party.location
       })
-
-
     }
     (this.partiesForm.controls['name']).updateValue('');
-
     (this.partiesForm.controls['description']).updateValue('');
     (this.partiesForm.controls['location']).updateValue('');
   }
-
 }
